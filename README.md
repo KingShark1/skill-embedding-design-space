@@ -6,4 +6,5 @@ DONE :
 
 TODO :
 1. Create the learning models for flow, diffusion, CPC. (Focusing on flow or diffusion [TBD])
-2. Check for how env/tasks work in visualizing the task for experimentation.
+2.	Add the learned models in ds_se/run.py inside build_alg_runner().
+3. Check for how env/tasks work in visualizing the task for experimentation.
