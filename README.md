@@ -3,8 +3,9 @@ Creating a approximation objective design space for skill embeddings for physica
 
 DONE :
 1. Download Isaac Gym from Nvidia's website : https://developer.nvidia.com/isaac-gym and follow the setup instructions. Make sure to check for correct installation by running the examples given inside IsaacGym installation.
+2. Add env/tasks as is, for it is directly related to the experimentation, for now focus is on developing a working model. Adding more tasks would come later.
 
 TODO :
 1. Create the learning models for flow, diffusion, CPC. (Focusing on flow or diffusion [TBD])
 2.	Add the learned models in ds_se/run.py inside build_alg_runner().
-3. Check for how env/tasks work in visualizing the task for experimentation.
+
