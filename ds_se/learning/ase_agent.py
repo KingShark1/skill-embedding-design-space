@@ -183,7 +183,6 @@ class ASEAgent(amp_agent.AMPAgent):
         
         return
 
-    
     def calc_gradients(self, input_dict):
         self.set_train()
 
