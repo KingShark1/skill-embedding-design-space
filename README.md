@@ -8,4 +8,5 @@ DONE :
 TODO :
 1. Create the learning models for flow, diffusion, CPC. (Focusing on [FLOW-GAN](https://lilianweng.github.io/posts/2018-10-13-flow-models/#types-of-generative-models ) )
 2.	Add the learned models in ds_se/run.py inside build_alg_runner().
+3.  Convert model from [FLOW](https://github.com/ikostrikov/pytorch-flows/blob/master/flows.py) to the form of your network builder.
 
