@@ -10,3 +10,4 @@ TODO :
 2.	Add the learned models in ds_se/run.py inside build_alg_runner().
 3.  Convert model from [FLOW](https://github.com/ikostrikov/pytorch-flows/blob/master/flows.py) to the form of your network builder.
 
+Check
