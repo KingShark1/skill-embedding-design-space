@@ -10,4 +10,4 @@ TODO :
 2.	Add the learned models in ds_se/run.py inside build_alg_runner().
 3.  Convert model from [FLOW](https://github.com/ikostrikov/pytorch-flows/blob/master/flows.py) to the form of your network builder.
 
-Check
+The dissertation entitled “Design Space Of Skill Embeddings For Physically Simulated Characters” submitted by Akash Mishra, Arinjay Saraf, Manas Tiwari and Yuvraj Singh is a satisfactory account of the bonafide work done under my supervision is recommended towards the partial fulfilment for the award of Bachelor of Engineering in Computer Engineering degree by Devi Ahilya Vishwavidyalaya, Indore.
