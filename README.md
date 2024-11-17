@@ -11,3 +11,5 @@ TODO :
 3.  Convert model from [FLOW](https://github.com/ikostrikov/pytorch-flows/blob/master/flows.py) to the form of your network builder.
 
 The dissertation entitled “Design Space Of Skill Embeddings For Physically Simulated Characters” submitted by Akash Mishra, Arinjay Saraf, Manas Tiwari and Yuvraj Singh is a satisfactory account of the bonafide work done under my supervision is recommended towards the partial fulfilment for the award of Bachelor of Engineering in Computer Engineering degree by Devi Ahilya Vishwavidyalaya, Indore.
+
+Click on the link to open the [Dissertation](https://docs.google.com/document/d/1blAdvtx8M_-O_sqLXbRyBfapGMWhyWlwH4B1sB3vU-s/edit?usp=sharing)
