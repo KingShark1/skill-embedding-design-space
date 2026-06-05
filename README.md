@@ -170,6 +170,27 @@ This work builds directly on:
 
 > Peng, X.B., Guo, Y., Halper, L., Levine, S., & Fidler, S. (2022). ASE: Large-Scale Reusable Adversarial Skill Embeddings for Physically Simulated Characters. *ACM Trans. Graph.*, 41(4).
 
+```bibtex
+@article{
+	2021-TOG-AMP,
+	author = {Peng, Xue Bin and Ma, Ze and Abbeel, Pieter and Levine, Sergey and Kanazawa, Angjoo},
+	title = {AMP: Adversarial Motion Priors for Stylized Physics-Based Character Control},
+	journal = {ACM Trans. Graph.},
+	issue_date = {August 2021},
+	volume = {40},
+	number = {4},
+	month = jul,
+	year = {2021},
+	articleno = {1},
+	numpages = {15},
+	url = {http://doi.acm.org/10.1145/3450626.3459670},
+	doi = {10.1145/3450626.3459670},
+	publisher = {ACM},
+	address = {New York, NY, USA},
+	keywords = {motion control, physics-based character animation, reinforcement learning},
+} 
+```
+
 ---
 
 ## Contributing
