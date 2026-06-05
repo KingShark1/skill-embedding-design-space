@@ -9,7 +9,7 @@ Institute of Engineering & Technology, DAVV, Indore · B.E. Computer Engineering
 
 ## Overview
 
-Control policies in physics-based character animation are typically trained from scratch for every task — a process that is both compute-intensive and brittle. This project builds on NVIDIA's [ASE framework](https://arxiv.org/abs/2205.01906) (Peng et al., 2022), which uses adversarial imitation learning to learn reusable skill embeddings from large, unstructured motion datasets.
+Control policies in physics-based character animation are typically trained from scratch for every task, a process that is both compute-intensive and brittle. This project builds on NVIDIA's [ASE framework](https://arxiv.org/abs/2205.01906) (Peng et al., 2022), which uses adversarial imitation learning to learn reusable skill embeddings from large, unstructured motion datasets.
 
 Our contribution is a **systematic exploration of the design space** for the distribution matching objective at the heart of skill embedding pre-training. Specifically, we replace the GAN-based adversarial objective with **normalizing flow models** and evaluate the tradeoffs in generalizability, training stability, and downstream task performance.
 
@@ -27,7 +27,7 @@ The central question we investigate:
 
 ## Key Finding
 
-Flow models trained to the **same reward score as GAN-based ASE generalize better across downstream tasks** — producing more consistent behavior when transferred to tasks the model was not explicitly trained for.
+Flow models trained to the **same reward score as GAN-based ASE generalize better across downstream tasks** producing more consistent behavior when transferred to tasks the model was not explicitly trained for.
 
 The tradeoff is compute: GAN-based ASE converged in ~96 hours on an NVIDIA A100. Flow models required an estimated **~128 hours** to reach equivalent reward scores. Due to compute constraints, flow models were evaluated at intermediate checkpoints rather than full convergence — making the generalizability result particularly notable, as it held even at lower absolute performance.
 
@@ -49,14 +49,14 @@ Following ASE, training is split into two stages:
 **Pre-training (Low-Level Policy)**
 A skill-conditioned policy π(a|s, z) is trained to map latent skill vectors z to behaviors that resemble motions in the dataset. Rather than using a GAN discriminator as the imitation objective, we use a **normalizing flow** to model the motion distribution directly, enabling exact log-likelihood computation.
 
-This avoids the instability of adversarial training and sidesteps mode collapse — a known failure mode of GAN-based skill learning on diverse datasets.
+This avoids the instability of adversarial training and sidesteps mode collapse, a known failure mode of GAN-based skill learning on diverse datasets.
 
 **Task-Training (High-Level Policy)**
 After pre-training, a high-level policy ω(z|s, g) is trained to select latent skill codes that direct the pre-trained low-level policy toward task-specific goals. No motion data is required at this stage.
 
 ### Dataset
 
-The motion dataset was built from scratch in **Blender 3.1** — a custom humanoid rig with anatomically constrained joints was animated to produce motion clips ranging from locomotion primitives (walk cycle, balance recovery) to complex manipulation behaviors (pick-and-throw, sword combat). The pick-and-throw animations were hand-keyframed entirely by Yuvraj Singh, as no suitable reference data was publicly available.
+The motion dataset was built from scratch in **Blender 3.1**. A custom humanoid rig with anatomically constrained joints was animated to produce motion clips ranging from locomotion primitives (walk cycle, balance recovery) to complex manipulation behaviors (pick-and-throw, sword combat). The pick-and-throw animations were hand-keyframed entirely by Yuvraj Singh, as no suitable reference data was publicly available.
 
 Motion clips were exported as MJCF files and converted to `.npy` format for ingestion into the training pipeline.
 
@@ -115,9 +115,9 @@ Across all tasks, the flow-based low-level policy showed **more consistent trans
 
 ## Limitations
 
-- Full convergence of flow models was not achieved due to compute budget constraints (~$X on cloud GPU). The generalizability advantage may widen or narrow at full convergence — an open question.
+- Full convergence of flow models was not achieved due to compute budget constraints (~$50 on cloud GPU). The generalizability advantage may widen or narrow at full convergence, this is an open question.
 - Sim-to-real transfer was not attempted. Joint torque matching between simulation weights and physical hardware remains a significant open problem.
-- The skill discovery objective still cannot fully capture the behavioral diversity in large, heterogeneous motion datasets — a limitation shared with the GAN baseline.
+- The skill discovery objective still cannot fully capture the behavioral diversity in large, heterogeneous motion datasets remains a limitation shared with the GAN baseline.
 - Mode collapse in the GAN baseline was partially mitigated by an ensemble approach; this is documented in the dissertation.
 
 ---
@@ -196,7 +196,7 @@ This work builds directly on:
 ## Contributing
 
 Issues and pull requests are welcome, particularly around:
-- Alternative distribution matching objectives (diffusion models, CPC — partially explored in the dissertation)
+- Alternative distribution matching objectives (diffusion models, CPC partially explored in the dissertation)
 - Sim-to-real transfer experiments
 - Extending the motion dataset
 
