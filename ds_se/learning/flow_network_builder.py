@@ -16,10 +16,11 @@ class FLOWBuilder(network_builder.A2CBuilder):
 		super().__init__(**kwargs)
 		return
 		
-	class Network(network_builder.A2CBuilder):
+	class Network(amp_network_builder.AMPBuilder.Network):
 		def __init__(self, params, **kwargs):
 			super().__init__(params, **kwargs)
-			
+		
+
 			
 
 	def build(self, name, **kwargs):
