@@ -49,6 +49,10 @@ Following ASE, training is split into two stages:
 **Pre-training (Low-Level Policy)**
 A skill-conditioned policy π(a|s, z) is trained to map latent skill vectors z to behaviors that resemble motions in the dataset. Rather than using a GAN discriminator as the imitation objective, we use a **normalizing flow** to model the motion distribution directly, enabling exact log-likelihood computation.
 
+
+> Formal derivation of the flow-based skill discovery objective: [papers/flow-skill-discovery-reward-derivation.pdf](papers/flow-skill-discovery-reward-derivation.pdf)
+
+
 This avoids the instability of adversarial training and sidesteps mode collapse, a known failure mode of GAN-based skill learning on diverse datasets.
 
 **Task-Training (High-Level Policy)**
